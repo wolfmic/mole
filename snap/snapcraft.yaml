@@ -1,19 +1,18 @@
-name: mole
-version: '0.1'
-summary: IOT interactive server
+name: httplab
+version: git
+summary: An interactive web server.
 description: |
-  Server that store data from esp32 (humidity and temperature)
-  json provided
+  HTTPLab let you inspect HTTP requests and forge responses.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: devel
+confinement: devmode
 
 parts:
-  mole:
-    source: git@gitlab.com:wolfheimrick/mole.git
-    go-packages: ["github.com/gorilla/mux"]
+  httplab:
+    source: .
     plugin: go
+    go-importpath: github.com/gchaincl/httplab
 
 apps:
-  mole:
-    command: mole
+  httplab:
+    command: httplab

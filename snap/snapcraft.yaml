@@ -9,6 +9,8 @@ grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
 parts:
+  go:
+    source-tag: go1.7.5
   mole:
     plugin: go
     go-importpath: gitlab.com/wolfheimrick/mole

@@ -12,6 +12,7 @@ parts:
   go:
     source-tag: go1.7.5
   mole:
+    after: [go]
     plugin: go
     go-importpath: gitlab.com/wolfheimrick/mole
     source: https://gitlab.com/wolfheimrick/mole.git

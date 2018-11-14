@@ -9,14 +9,11 @@ grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
 parts:
-  mux:
-    source: .
-    plugin: go
-    go-importpath: github.com/gchaincl/httplab
   mole:
-    source: .
-    plugin: go
+    source: git@gitlab.com:wolfheimrick/mole.git
+    go-packages: ["github.com/gorilla/mux"]
     go-importpath: gitlab.com/wolfheimrick/mole
+    plugin: go
 
 apps:
   mole:

@@ -1,0 +1,23 @@
+name: mole
+version: '0.1'
+summary: IOT interactive server
+description: |
+  Server that store data from esp32 (humidity and temperature)
+  json provided
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  mux:
+    source: .
+    plugin: go
+    go-importpath: github.com/gchaincl/httplab
+  mole:
+    source: .
+    plugin: go
+    go-importpath: gitlab.com/wolfheimrick/mole
+
+apps:
+  mole:
+    command: mole

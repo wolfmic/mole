@@ -12,7 +12,7 @@ parts:
   mole:
     plugin: go
     go-importpath: gitlab.com/wolfheimrick/mole
-    source: gitlab.com:wolfheimrick/mole.git
+    source: git@gitlab.com:wolfheimrick/mole.git
     source-type: git
 
 apps:

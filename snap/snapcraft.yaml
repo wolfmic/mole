@@ -12,6 +12,7 @@ parts:
   mole:
     source: git@gitlab.com:wolfheimrick/mole.git
     go-packages: ["github.com/gorilla/mux"]
+    go-importpath: $GOPATH
     plugin: go
 
 apps:
